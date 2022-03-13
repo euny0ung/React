@@ -11,11 +11,11 @@ SPA를 사용하면 몇가지 문제점이 발생한다. 특정 페이지를 즐
 
 **react router의 핵심 컴포넌트**  
 1. Link
-  html의 <a>와 비슷한 기능이다. Link to=''는 a href="" 와 비슷하게 이동 경로를 지정한다.
+  html의 `<a>`와 비슷한 기능이다. `<Link to=''>`는 `<a href="">` 와 비슷하게 이동 경로를 지정한다.
 2. Route
-  Link to가 현재 주소창을 가리키는 경우 보여줄 컴포넌트를 지정한다. ex) <Route path='/First' component={First} /> 이때 path에는 경로, component에는 매치되었을때 보여줄 컴포넌트를 할당한다.
+  Link to가 현재 주소창을 가리키는 경우 보여줄 컴포넌트를 지정한다. ex) `<Route path='/First' component={First} />` 이때 path에는 경로, component에는 매치되었을때 보여줄 컴포넌트를 할당한다.
 3. Router
-  <Route>와 <Link>를 묶어주는 기능이다. <Route>와 <Link> 컴포넌트는 DOM 트리 상에서 반드시 <Router>를 공통 상위 컴포넌트로 가진다.
+  `<Route>`와 `<Link>`를 묶어주는 기능이다. `<Route>`와 `<Link>` 컴포넌트는 DOM 트리 상에서 반드시 `<Router>`를 공통 상위 컴포넌트로 가진다.
     
  ```
     <Router>
