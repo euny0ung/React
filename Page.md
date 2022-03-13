@@ -10,7 +10,7 @@ SPA를 사용하면 몇가지 문제점이 발생한다. 특정 페이지를 즐
 
 **react router의 핵심 컴포넌트**
 <Link>
-  html의 <a>와 비슷한 기능이다. '<Link to=''>'는 '<a href="">' 와 비슷하게 이동 경로를 지정한다.
+  html의 <a>와 비슷한 기능이다. Link to=''는 a href="" 와 비슷하게 이동 경로를 지정한다.
 <Route>
   Link to가 현재 주소창을 가리키는 경우 보여줄 컴포넌트를 지정한다. ex) <Route path='/First' component={First} /> 이때 path에는 경로, component에는 매치되었을때 보여줄 컴포넌트를 할당한다.
 <Router>
