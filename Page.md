@@ -26,4 +26,4 @@ SPA를 사용하면 몇가지 문제점이 발생한다. 특정 페이지를 즐
       <Route path="/sub" component={SubPage} />
       <Route path="/profile" component={Profile} />
     </Router>
-    ```
+ ```
