@@ -15,7 +15,8 @@ SPA를 사용하면 몇가지 문제점이 발생한다. 특정 페이지를 즐
   Link to가 현재 주소창을 가리키는 경우 보여줄 컴포넌트를 지정한다. ex) <Route path='/First' component={First} /> 이때 path에는 경로, component에는 매치되었을때 보여줄 컴포넌트를 할당한다.
 <Router>
   <Route>와 <Link>를 묶어주는 기능이다. <Route>와 <Link> 컴포넌트는 DOM 트리 상에서 반드시 <Router>를 공통 상위 컴포넌트로 가진다.
-  *ex) <Router>
+  ```
+    ex) <Router>
       <header>
         <Link to="/">Home</Link>
         <Link to="/sub">SUb Page</Link>
@@ -24,4 +25,5 @@ SPA를 사용하면 몇가지 문제점이 발생한다. 특정 페이지를 즐
       <Route path="/" exact component={Home} />
       <Route path="/sub" component={SubPage} />
       <Route path="/profile" component={Profile} />
-    </Router>*
+    </Router>
+    ```
