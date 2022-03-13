@@ -17,7 +17,7 @@ SPA를 사용하면 몇가지 문제점이 발생한다. 특정 페이지를 즐
   <Route>와 <Link>를 묶어주는 기능이다. <Route>와 <Link> 컴포넌트는 DOM 트리 상에서 반드시 <Router>를 공통 상위 컴포넌트로 가진다.
     
  ```
-    ex) <Router>
+    <Router>
       <header>
         <Link to="/">Home</Link>
         <Link to="/sub">SUb Page</Link>
