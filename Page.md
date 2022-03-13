@@ -11,9 +11,9 @@ SPA를 사용하면 몇가지 문제점이 발생한다. 특정 페이지를 즐
 
 **react router의 핵심 컴포넌트**  
 1. Link
-  html의 `<a>`와 비슷한 기능이다. `<Link to=''>`는 `<a href="">` 와 비슷하게 이동 경로를 지정한다.
+  html의 `<a>`와 비슷한 기능이다. `<Link to=''>`는 `<a href="">` 와 비슷하게 이동 경로를 지정한다. 
 2. Route
-  Link to가 현재 주소창을 가리키는 경우 보여줄 컴포넌트를 지정한다. ex) `<Route path='/First' component={First} />` 이때 path에는 경로, component에는 매치되었을때 보여줄 컴포넌트를 할당한다.
+  Link to가 현재 주소창을 가리키는 경우 보여줄 컴포넌트를 지정한다. ex) `<Route path='/First' component={First} />` 이때 path에는 경로, component에는 매치되었을때 보여줄 컴포넌트를 할   당한다. 아래 예시와 같이 to prop에 / 만 입력할 경우, /로 시작하는 모든 url 경로와 매치된다. 즉, 컴포넌트가 url 경로와 상관없이 보여지게된다. 아래의 예시를 보자. 홈페이지에 들어가면       Home, Subpage, Profile 컴포넌트가 모두 렌더링 될 것이다. 따라서 `<Route exact path=~~>`와 같이 작성하는게 좋다.
 3. Router
   `<Route>`와 `<Link>`를 묶어주는 기능이다. `<Route>`와 `<Link>` 컴포넌트는 DOM 트리 상에서 반드시 `<Router>`를 공통 상위 컴포넌트로 가진다.
     
@@ -24,8 +24,19 @@ SPA를 사용하면 몇가지 문제점이 발생한다. 특정 페이지를 즐
         <Link to="/sub">SUb Page</Link>
         <Link to="/profile">Profile</Link>
       </header>
-      <Route path="/" exact component={Home} />
+      <Route path="/" component={Home} />
       <Route path="/sub" component={SubPage} />
       <Route path="/profile" component={Profile} />
     </Router>
 ```
+
+
+**이 외의 컴포넌트**
+1. switch
+2. Not a Found
+3. Redirect
+
+**Link vs NavLink**  
+네비게이션 바를 만들면서 NavLink라는 걸 알게 되었다.
+NavLink는 특정 링크에 스타일을 넣을 수 있는, Link의 special version이라고 할 수 있다. 어떻게 스타일을 적용할 수 있는 걸까?
+바로 `activeStyle`과 `activeClassName` 속성을 이용한다. 현재 웹페이지 URL과 NavLink to가 가리키는 경로가 일치하면 activeStyle과 activeClassName이 활성화된다.
