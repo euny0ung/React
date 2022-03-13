@@ -14,6 +14,7 @@ SPA를 사용하면 몇가지 문제점이 발생한다. 특정 페이지를 즐
   html의 `<a>`와 비슷한 기능이다. `<Link to=''>`는 `<a href="">` 와 비슷하게 이동 경로를 지정한다. 
 2. Route
   Link to가 현재 주소창을 가리키는 경우 보여줄 컴포넌트를 지정한다. ex) `<Route path='/First' component={First} />` 이때 path에는 경로, component에는 매치되었을때 보여줄 컴포넌트를 할   당한다. 아래 예시와 같이 to prop에 / 만 입력할 경우, /로 시작하는 모든 url 경로와 매치된다. 즉, 컴포넌트가 url 경로와 상관없이 보여지게된다. 아래의 예시를 보자. 홈페이지에 들어가면       Home, Subpage, Profile 컴포넌트가 모두 렌더링 될 것이다. 따라서 `<Route exact path=~~>`와 같이 작성하는게 좋다.
+  _react-router v6부터 exact 옵션을 사용하지 않는다. 앞부분만 일치하여도 전부 매칭되던 디폴트 매칭 규칙이 정확히 일치하여야 매칭되는 것으로 바뀌었다. 만약 여러 라우팅을 매칭시키고 싶다면 `<Route path='name/*' />`과 같이 쓰면 된다. (name으로 시작되는 모든 라우팅 매칭.)
 3. Router
   `<Route>`와 `<Link>`를 묶어주는 기능이다. `<Route>`와 `<Link>` 컴포넌트는 DOM 트리 상에서 반드시 `<Router>`를 공통 상위 컴포넌트로 가진다.
     
@@ -32,9 +33,14 @@ SPA를 사용하면 몇가지 문제점이 발생한다. 특정 페이지를 즐
 
 
 **이 외의 컴포넌트**
-1. switch
-2. Not a Found
-3. Redirect
+1. Switch
+   존재하지 않는 경로로 접근하려할 때 에러페이지를 띄우고 싶은 경우에는 다음과 같이 path값이 없는 Route를 사용하면 된다.
+   `<Route component={PageNotFound} />`
+   하지만 존재하지 않는 경로로 접근하는 경우가 아니더라도 렌더링되는 문제점이 있다. 라우터가 path를 매칭시킬 때, path값이 없기 때문에 무조건 렌더링 해버린다.
+   이와 같은 문제를 해결하기위해 Switch를 사용한다. Switch는 여러개가 매칭되어도 가장 먼저 매칭된, 즉 맨 위의 Route만 보여준다.
+   _react-router v6부터 Switch 대신 Routes를 사용한다_
+3. Not a Found
+4. Redirect
 
 **Link vs NavLink**  
 네비게이션 바를 만들면서 NavLink라는 걸 알게 되었다.
