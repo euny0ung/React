@@ -31,16 +31,13 @@ SPA를 사용하면 몇가지 문제점이 발생한다. 특정 페이지를 즐
     </Router>
 ```
 
-
-**이 외의 컴포넌트**
-1. Switch
+4. Switch
    존재하지 않는 경로로 접근하려할 때 에러페이지를 띄우고 싶은 경우에는 다음과 같이 path값이 없는 Route를 사용하면 된다.
    `<Route component={PageNotFound} />`
    하지만 존재하지 않는 경로로 접근하는 경우가 아니더라도 렌더링되는 문제점이 있다. 라우터가 path를 매칭시킬 때, path값이 없기 때문에 무조건 렌더링 해버린다.
    이와 같은 문제를 해결하기위해 Switch를 사용한다. Switch는 여러개가 매칭되어도 가장 먼저 매칭된, 즉 맨 위의 Route만 보여준다.  
    _react-router v6부터 Switch 대신 Routes를 사용한다_
-3. Not a Found
-4. Redirect
+
 
 **Link vs NavLink**  
 네비게이션 바를 만들면서 NavLink라는 걸 알게 되었다.
