@@ -13,7 +13,7 @@ LIBRARY;`
 
 
 
-1. 테이블 생성
+1. 테이블 생성   
 `CREATE TABLE MEMBER  
 (  
   name VARCHAR(30) NOT NULL,  
@@ -23,7 +23,7 @@ LIBRARY;`
  );`   
  
  
- 2. 데이터 삽입
+ 2. 데이터 삽입    
  `INSERT INTO MEMBER  
  VALUES  
  (  
@@ -34,31 +34,31 @@ LIBRARY;`
  );`   
  
  
- 3. 데이터 찾기 -WHERE 조건절
+ 3. 데이터 찾기 -WHERE 조건절   
  
-    -이름이 재현인 사람 찾기
+    -이름이 재현인 사람 찾기   
 `SELECT *  
  FROM MEMBER  
  WHERE name='재현';  `   
  
-    -주소가 서울로 시작하는 사람 모두 찾기 -LIKE
+    -주소가 서울로 시작하는 사람 모두 찾기 -LIKE   
  `SELECT *  
  FROM MEMBER  
  WHERE address like'서울%';  `    
  
-    -이름이 재현이고 주소가 서울로 시작하는 사람 찾기 -AND
+    -이름이 재현이고 주소가 서울로 시작하는 사람 찾기 -AND   
  `SELECT *   
  FROM MEMBER   
  WHERE name='재현' AND   
  address like'서울%';   `    
  
-    -이름이 재현이거나 주소가 서울로 시작하는 사람 찾기 -OR
+    -이름이 재현이거나 주소가 서울로 시작하는 사람 찾기 -OR   
  `SELECT *   
  FROM MEMBER   
  WHERE name='재현' AND   
  address like'서울%';  `     
   
-    -이름이 재현이고 주소가 서울로 시작하는 사람을 제외한 모든 사람 찾기 -NOT(여집합)
+    -이름이 재현이고 주소가 서울로 시작하는 사람을 제외한 모든 사람 찾기 -NOT(여집합)   
  `SELECT *   
  FROM MEMBER   
  WHERE   
@@ -66,15 +66,15 @@ LIBRARY;`
  address like'서울%');`     
  
  
- 4. 데이터 업데이트하기
-    -이름이 재현인 사람의 전화번호 업데이트하기
+ 4. 데이터 업데이트하기   
+    -이름이 재현인 사람의 전화번호 업데이트하기   
  `UPDATE MEMBER   
  SET num='01011111111'      
  WHERE name='재현'    `     
  
  
- 5. 데이터 삭제
-    -이름이 재현인 사람의 레코드를 모두 삭제
+ 5. 데이터 삭제    
+    -이름이 재현인 사람의 레코드를 모두 삭제   
  `DELETE FROM MEMBER   
  WHERE name='재현'    `    
  
@@ -90,6 +90,7 @@ LIBRARY;`
  `num IN(1,2,3,4) (num은 1, 2, 3, 4 중 하나다)`   
  `num is NULL`   
  `num is NOT NULL`   
+ 
 
-사용할 DB 지정 (접속할 때 마다)  
+**사용할 DB 지정 (접속할 때 마다)**    
 `use DB이름`
