@@ -7,12 +7,12 @@ DATABASE
 **DB 명령어**
 세미콜론으로 구문의 끝을 알린다.  
 `CREATE  
-# DATABASE  
-# LIBRARY;`  
+DATABASE  
+LIBRARY;`  
 
 `CREATE TABLE MEMBER  
 (  
-  name VARCHAR(30),  
+  name VARCHAR(30) NOT NULL,  
   regno VARCHAR(15) PRIMARY KEY,  
   adress VARCHAR(200),  
   num NUMBER(20)  
