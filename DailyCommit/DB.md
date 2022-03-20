@@ -39,7 +39,7 @@ LIBRARY;`
  SET num='01011111111'  
  WHERE name='재현'`
  
- `DELETE FROM MEMBER  
+ `DELETE FROM MEMBER   
  WHERE name='재현'  `
  
 
