@@ -79,7 +79,8 @@ LIBRARY;`
  WHERE name='재현'    `    
  
  
- **DB 연산자**
+ 
+ **DB 연산자**    
  num=111   
  num<>111   
  num>111, num<111   
