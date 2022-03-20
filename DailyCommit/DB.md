@@ -88,7 +88,7 @@ ON
 MEMBER.name=   
 HISTORY.name;`   
 
--INNER JOIN을 사용하지 않고 병합
+  -INNER JOIN을 사용하지 않고 병합
 `SELECT *   
 FROM MEMBER, HISTORY   
 WHERE name='재현'   
