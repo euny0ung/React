@@ -14,9 +14,34 @@ LIBRARY;`
 (  
   name VARCHAR(30) NOT NULL,  
   regno VARCHAR(15) PRIMARY KEY,  
-  adress VARCHAR(200),  
+  address VARCHAR(200),  
   num NUMBER(20)  
  );`
+ 
+ `INSERT INTO MEMBER  
+ VALUES  
+ (  
+   '재현',
+   '12345667',  
+   '서울시 동작구',  
+   '01000000000'  
+ );`
+ 
+ `SELECT *  
+ FROM MEMBER  
+ WHERE name='재현';  `
+ 
+ `SELECT *  
+ FROM MEMBER  
+ WHERE address like'서울%';  `
+ 
+ `UPDATE MEMBER  
+ SET num='01011111111'  
+ WHERE name='재현'`
+ 
+ `DELETE FROM MEMBER  
+ WHERE name='재현'  `
+ 
 
 사용할 DB 지정 (접속할 때 마다)  
 `use DB이름`
