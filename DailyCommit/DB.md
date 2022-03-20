@@ -70,16 +70,44 @@ LIBRARY;`
     -이름이 재현인 사람의 전화번호 업데이트하기   
  `UPDATE MEMBER   
  SET num='01011111111'      
- WHERE name='재현'    `     
+ WHERE name='재현';    `     
  
  
  5. 데이터 삭제    
     -이름이 재현인 사람의 레코드를 모두 삭제   
  `DELETE FROM MEMBER   
- WHERE name='재현'    `    
+ WHERE name='재현';    `    
  
  
- 
+ 6. 데이터 병합 -INNER JOIN      
+`SELECT *     
+FROM MEMBER    
+WHERE name='재현'   
+INNER JOIN HISTORY    
+ON    
+MEMBER.name=   
+HISTORY.name;`   
+
+-INNER JOIN을 사용하지 않고 병합
+`SELECT *   
+FROM MEMBER, HISTORY   
+WHERE name='재현'   
+AND   
+MEMBER.name=
+HISTORY.name;`   
+
+
+7. 정렬   -ORDER BY (기본 오름차순)      
+   -name column을 기준으로 오름차순 정렬       
+`SELECT  *
+FROM MEMBER
+ORDER BY name;`   
+    -name column을 기준으로 내림차순 정렬   
+`SELECT *
+FROM MEMBER
+ORDER BY name desc;`   
+
+
  
  **DB 연산자**    
  `num=111`   
