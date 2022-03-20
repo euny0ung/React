@@ -80,15 +80,16 @@ LIBRARY;`
  
  
  
+ 
  **DB 연산자**    
- num=111   
- num<>111   
- num>111, num<111   
- num>=111, num<=111   
- num BETWEEN 111 AND 123 (111<=num<=123)   
- num IN(1,2,3,4) (num은 1, 2, 3, 4 중 하나다)   
- num is NULL   
- num is NOT NULL
+ `num=111`   
+ `num<>111`  
+ `num>111, num<111`   
+ `num>=111, num<=111`   
+ `num BETWEEN 111 AND 123 (111<=num<=123)`   
+ `num IN(1,2,3,4) (num은 1, 2, 3, 4 중 하나다)`   
+ `num is NULL`   
+ `num is NOT NULL`   
 
 사용할 DB 지정 (접속할 때 마다)  
 `use DB이름`
