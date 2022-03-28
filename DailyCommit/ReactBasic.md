@@ -1,17 +1,18 @@
 vue.js, angular.js 등은 주로 MVC, MVVM, MVW 아키텍처로 애플리케이션을 구조화한다. 이 구조들의 공통점은 모델(M)과 뷰(V)가 있다는 것이다. 모델은 애플리케이션에서 사용하는 데이터를 관리하는 영역이고 뷰는 사용자가 보는 부분이다. 사용자가 버튼 클릭 등의 작업을 하면 컨트롤러가 모델 데이터를 수정하고 변경 사항을 뷰에 반영한다. 이 과정에서 보통은 뷰를 변형한다. 예를 들어,
 
-{
+
+`{
 "title" : "Hello",
 
 "contents": "Hello World",
 
 "likes": 1
 
-}
+}`
 
  
 
-<div id="post">
+`<div id="post">
 
    <div class="title">Hello</div>
 
@@ -19,7 +20,7 @@ vue.js, angular.js 등은 주로 MVC, MVVM, MVW 아키텍처로 애플리케이�
 
    <div class="likes">1</div>
 
-</div>
+</div>`
 
 여기서 JSON의 likes를 2로 바꾸면 html에서 post의 likes 요소를 찾아 수정해줘야한다. 이것은 매우 번거로운 일이다.
 
